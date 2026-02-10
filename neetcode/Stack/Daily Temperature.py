@@ -1,6 +1,6 @@
 class Solution:
     def dailyTemperatures(self, temperatures: list[int]) -> list[int]:
-        stack = []
+        stack: list[int] = []
         result = [0] * len(temperatures)
 
         for idx, temp in enumerate(temperatures):

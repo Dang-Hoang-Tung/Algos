@@ -1,8 +1,10 @@
+from collections import defaultdict
+
 class Solution:
-    def isValidSudoku(self, board: List[List[str]]) -> bool:
-        rows = defaultdict(set)
-        cols = defaultdict(set)
-        areas = defaultdict(set)
+    def isValidSudoku(self, board: list[list[str]]) -> bool:
+        rows: dict[int, set[str]] = defaultdict(set)
+        cols: dict[int, set[str]] = defaultdict(set)
+        areas: dict[tuple[int, int], set[str]] = defaultdict(set)
 
         for i in range(9):
             for j in range(9):

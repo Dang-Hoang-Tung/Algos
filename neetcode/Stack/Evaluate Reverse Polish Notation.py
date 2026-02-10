@@ -1,7 +1,9 @@
+from typing import Mapping, Callable
+
 class Solution:
     def evalRPN(self, tokens: list[str]) -> int:
-        stack = []
-        funcs = {
+        stack: list[int] = []
+        funcs: Mapping[str, Callable[[int, int], int]] = {
             '+': (lambda a, b: a + b),
             '-': (lambda a, b: a - b),
             '*': (lambda a, b: a * b),

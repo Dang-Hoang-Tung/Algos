@@ -1,8 +1,10 @@
+from collections import defaultdict
+
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         if len(s) != len(t):
             return False
-        my_dict = defaultdict(int)
+        my_dict: dict[str, int] = defaultdict(int)
         i = 0
         while i < len(s):
             my_dict[s[i]] += 1

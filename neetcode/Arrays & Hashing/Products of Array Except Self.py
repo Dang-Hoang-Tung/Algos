@@ -1,6 +1,5 @@
-
 class Solution:
-    def productExceptSelf(self, nums: List[int]) -> List[int]:
+    def productExceptSelf(self, nums: list[int]) -> list[int]:
         left_product = [1]
         right_product = [1]
 

@@ -1,6 +1,5 @@
 class Solution:
-
-    def encode(self, strs: List[str]) -> str:
+    def encode(self, strs: list[str]) -> str:
         result = []
         for string in strs:
             if len(string) == 0:
@@ -10,8 +9,7 @@ class Solution:
             result.append(encoding)
         return ';'.join(result)
 
-
-    def decode(self, s: str) -> List[str]:
+    def decode(self, s: str) -> list[str]:
         if (len(s) == 0):
             return []
         strs = s.split(';')

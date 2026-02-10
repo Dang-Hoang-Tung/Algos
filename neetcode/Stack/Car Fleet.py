@@ -4,7 +4,7 @@ class Solution:
         cars = [{"pos": pos, "sp": sp} for pos, sp in zip(position, speed)]
         # Sort descending by position
         cars = sorted(cars, key=lambda x: x["pos"], reverse=True)
-        eta_stack = []
+        eta_stack: list[float] = []
 
         for car in cars:
             eta = (target - car["pos"]) / car["sp"]

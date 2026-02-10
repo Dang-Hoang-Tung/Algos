@@ -1,12 +1,14 @@
+from typing import Mapping
+
 class Solution:
     def isValid(self, s: str) -> bool:
-        matching = {
+        matching: Mapping[str, str] = {
             ')': '(',
             '}': '{',
             ']': '['
         }
 
-        stack = []
+        stack: list[str] = []
         for char in s:
             # opening bracket
             if char in matching.values():

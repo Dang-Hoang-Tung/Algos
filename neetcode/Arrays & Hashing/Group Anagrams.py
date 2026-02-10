@@ -1,5 +1,7 @@
+from collections import defaultdict
+
 class Solution:
-    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+    def groupAnagrams(self, strs: list[str]) -> list[list[str]]:
         my_dict = defaultdict(list)
         for string in strs:
             signature = [0] * 26 # alphabet length

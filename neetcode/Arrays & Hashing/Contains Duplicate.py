@@ -1,5 +1,5 @@
 class Solution:
-    def hasDuplicate(self, nums: List[int]) -> bool:
+    def hasDuplicate(self, nums: list[int]) -> bool:
         my_set = set()
         for num in nums:
             if num in my_set:

@@ -1,6 +1,6 @@
 class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-        my_dict = {}
+    def twoSum(self, nums: list[int], target: int) -> list[int]:
+        my_dict: dict[int, int] = {}
         for i, num in enumerate(nums):
             diff = target - num
             if diff in my_dict:
